@@ -18,7 +18,6 @@ pipeline {
                         to: "williamchoi418@gmail.com",
                         subject: "Unit and Integration Tests Status Email",
                         body: "Unit and Integration Tests have passed successful!",
-                        attachLog: true
                     )
                 }
                 failure {
@@ -26,7 +25,6 @@ pipeline {
                         to: "williamchoi418@gmail.com",
                         subject: "Unit and Integration Tests Status Email",
                         body: "Unit and Integration Tests have failed!",
-                        attachLog: true
                     )
                 }
                 always {
@@ -54,7 +52,6 @@ pipeline {
                         to: "williamchoi418@gmail.com",
                         subject: "Security Scan Status Email",
                         body: "Security Scan has passed successful!",
-                        attachLog: true
                     )
                 }
                 failure {
@@ -62,7 +59,6 @@ pipeline {
                         to: "williamchoi418@gmail.com",
                         subject: "Security Scan Status Email",
                         body: "Security Scan have failed!",
-                        attachLog: true
                     )
                 }
                 always {
@@ -90,7 +86,6 @@ pipeline {
                         to: "williamchoi418@gmail.com",
                         subject: "Integration Tests on Staging Status Email",
                         body: "Integration Tests on Staging has passed successful!",
-                        attachLog: true
                     )
                 }
                 failure {
@@ -98,7 +93,6 @@ pipeline {
                         to: "williamchoi418@gmail.com",
                         subject: "Integration Tests on Staging Status Email",
                         body: "Integration Tests on Staging have failed!",
-                        attachLog: true
                     )
                 }
                 always {
