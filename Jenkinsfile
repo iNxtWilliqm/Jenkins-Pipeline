@@ -14,19 +14,28 @@ pipeline {
             }
             post {
                 success {
-                    mail to: "williamchoi418@gmail.com",
-                    subject: "Unit and Integration Tests Status Email",
-                    body: "Unit and Integration Tests have passed successful!"
+                    emailext (
+                        to: "williamchoi418@gmail.com",
+                        subject: "Unit and Integration Tests Status Email",
+                        body: "Unit and Integration Tests have passed successful!",
+                        attachLog: true
+                    )
                 }
                 failure {
-                    mail to: "williamchoi418@gmail.com",
-                    subject: "Unit and Integration Tests Status Email",
-                    body: "Unit and Integration Tests have failed!"
+                    emailext (
+                        to: "williamchoi418@gmail.com",
+                        subject: "Unit and Integration Tests Status Email",
+                        body: "Unit and Integration Tests have failed!",
+                        attachLog: true
+                    )
                 }
                 always {
-                    mail to: "williamchoi418@gmail.com",
-                    subject: "Unit and Integration Tests Status Email",
-                    body: "Unit and Integration Tests log attached!"
+                    emailext (
+                        to: "williamchoi418@gmail.com",
+                        subject: "Unit and Integration Tests Status Email",
+                        body: "Unit and Integration Tests log attached!",
+                        attachLog: true
+                    )
                 }
             }
         }
@@ -41,19 +50,28 @@ pipeline {
             }
             post {
                 success {
-                    mail to: "williamchoi418@gmail.com",
-                    subject: "Security Scan Status Email",
-                    body: "Security Scan has passed successful!"
+                    emailext (
+                        to: "williamchoi418@gmail.com",
+                        subject: "Security Scan Status Email",
+                        body: "Security Scan has passed successful!",
+                        attachLog: true
+                    )
                 }
                 failure {
-                    mail to: "williamchoi418@gmail.com",
-                    subject: "Security Scan Status Email",
-                    body: "Security Scan have failed!"
+                    emailext (
+                        to: "williamchoi418@gmail.com",
+                        subject: "Security Scan Status Email",
+                        body: "Security Scan have failed!",
+                        attachLog: true
+                    )
                 }
                 always {
-                    mail to: "williamchoi418@gmail.com",
-                    subject: "Security Scan Status Email",
-                    body: "Security Scan log attached!"
+                    emailext (
+                        to: "williamchoi418@gmail.com",
+                        subject: "Security Scan Status Email",
+                        body: "Security Scan log attached!",
+                        attachLog: true
+                    )
                 }
             }
         }
@@ -68,19 +86,28 @@ pipeline {
             }
             post {
                 success {
-                    mail to: "williamchoi418@gmail.com",
-                    subject: "Integration Tests on Staging Status Email",
-                    body: "Integration Tests on Staging has passed successful!"
+                    emailext (
+                        to: "williamchoi418@gmail.com",
+                        subject: "Integration Tests on Staging Status Email",
+                        body: "Integration Tests on Staging has passed successful!",
+                        attachLog: true
+                    )
                 }
                 failure {
-                    mail to: "williamchoi418@gmail.com",
-                    subject: "Integration Tests on Staging Status Email",
-                    body: "Integration Tests on Staging have failed!"
+                    emailext (
+                        to: "williamchoi418@gmail.com",
+                        subject: "Integration Tests on Staging Status Email",
+                        body: "Integration Tests on Staging have failed!",
+                        attachLog: true
+                    )
                 }
                 always {
-                    mail to: "williamchoi418@gmail.com",
-                    subject: "Integration Tests on Staging Status Email",
-                    body: "Integration Tests on Staging log attached!"
+                    emailext (
+                        to: "williamchoi418@gmail.com",
+                        subject: "Integration Tests on Staging Status Email",
+                        body: "Integration Tests on Staging log attached!",
+                        attachLog: true
+                    )
                 }
             }
         }
